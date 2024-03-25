@@ -1,6 +1,8 @@
 main{
     width: 100%;
     .sec1{
+        width: 100%;
+        height: 100%;
         padding: 8rem 0 0 0;
         
         .view_btn{
@@ -30,6 +32,8 @@ main{
     } //sec1
     
     .sec2{
+        width: 100%;
+        height: 100%;
         padding: 10rem 0 15rem 0;
         
         iframe{
@@ -42,7 +46,7 @@ main{
 
     .sec3{
         width: 100%;
-        height: 96rem;
+        height: 76rem;
         color: #fff;
         text-align: center;
         background-image: url(/img/section3_bg.png);
@@ -87,5 +91,120 @@ main{
         .explain{
             font-size: 1.5rem;
         }
+    } //sec3
+    .sec4{
+        width: 100%;
+        height: 100%;
+        padding: 8rem 0 0 0;
+        .section_title{
+            margin-bottom: 7rem;
+        }
+        .sec4_cnt{
+            display: flex;
+            justify-content: space-between;
+            .sec4_left{
+                .view_btn{
+                    border: 2px solid #000;
+                    &:hover{
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            } //left
+            .sec4_right{
+                .sec4_bg{
+                    width: 40rem;
+                    height: 60rem;
+                    background-image: url(/img/section4_img.png);
+                    background-repeat: no-repeat;
+                    transition: all 0.3s;
+                }
+            } //right
+        }
+    } //sec4
+    .sec5{
+        width: 100%;
+        height: 92rem;
+        padding: 12rem 0 0 0;
+        color: #fff;
+        text-align: center;
+        .sec5_bg{
+            width: 100%;
+            height: 80rem;
+            background-image: url(/img/section5_bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .sub_title{
+            padding: 27rem 0 0 0;
+            margin-bottom: 2rem;
+        }
+        .section_title{
+            font-size: 4rem;
+        }
+        .section_title_small{
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        .view_btn{
+            margin: 8rem auto;
+            border: 2px solid #fff;
+                    &:hover{
+                        background-color: #fff;
+                        color: #000;
+                    }
+        }
+    } //sec5
+    .sec6{
+        width: 100%;
+        height: 75rem;
+        padding: 8rem 0 0 0;
+
+        .sec6_cnt{
+            display: flex;
+            justify-content: space-between;
+            .view_btn{
+                border: 2px solid #000;
+                margin-top: 6rem;
+                &:hover{
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+            .sec6_right{
+                .line1{
+                    margin-top: 5rem;
+                }
+                .line1, .line2, .line3{
+                    position: relative;
+                }
+                .line1:before, .line2:before, .line3:before{
+                    content: '';
+                    position: absolute;
+                    bottom: 25%;
+                    right: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #707070;
+                    opacity: 0.2;
+                }
+                .sec6_right_cnt{
+                    height: 12rem;
+                    .cnt_title{
+                        font-size: 1.8rem;
+                        font-weight: 900;
+                        margin-bottom: 1.5rem;
+                    }
+                    .cnt_date{
+                        font-size: 1.3rem;
+                        font-weight: 900;
+                        color: #707070;
+                    }
+                }
+            }
+        }
+    } //sec6
+    footer{
+        background-color: #000;
     }
 }
