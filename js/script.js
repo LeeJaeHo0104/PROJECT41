@@ -61,6 +61,14 @@ window.onscroll = function() {
 	//sec3
 	const sec3Sub = document.querySelector('.sec3 .sub_title');
 	const sec3Main = document.querySelector('.sec3 .section_title');
+
+	// const country = document.querySelector('.sec3 #country');
+	// const money = document.querySelector('.sec3 #money');
+	// const people = document.querySelector('.sec3 #people');
+	// let isExecuted = false;
+	// let count = 0;
+	
+
 	if(height > 2300 && height < 3200){
 		sec3Sub.style.opacity = '1';
 		sec3Sub.style.transform = 'translateY(0)';
@@ -72,8 +80,6 @@ window.onscroll = function() {
 		sec3Main.style.opacity = '0';
 		sec3Main.style.transform = 'translateY(5rem)';
 	}
-
-	//!! 여기 까지함
 
 
 	//sec4
@@ -87,4 +93,32 @@ window.onscroll = function() {
 		sec4Bg.style.backgroundSize = '150% 150%';
 		sec4Bg.style.backgroundPosition = 'right top';
 	}
+}
+
+
+
+window.onscroll = function() {
+	let height = window.pageYOffset;
+	console.log('스크롤 높이: ', height);
+
+
+const country = document.querySelector('.sec3 #country');
+const money = document.querySelector('.sec3 #money');
+const people = document.querySelector('.sec3 #people');
+let isExecuted = false;
+let count = 0;
+
+
+if(height > 2400 && !isExecuted){
+	isExecuted = true;
+	let counting = setInterval(function () {
+		if (count == 14) {
+			clearInterval(counting);
+			return false;
+		}
+		count += 1;
+		country.innerHTML = new Intl.NumberFormat().format(count);
+	}, 50);
+	window.removeEventListener('scroll', scrollHandler);
+}
 }

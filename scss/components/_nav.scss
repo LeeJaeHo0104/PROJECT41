@@ -16,22 +16,9 @@
         position: relative;
         display: flex;
         align-items: center;
-
-        & > li > a:hover .dep2{
-            height: 100%;
-        }
         & > .logo{
             padding: 0;
         }
-        .dep2{
-            position: absolute;
-            background-color: #000;
-            height: 0;
-            display: none;
-            &:hover{
-                height: 50rem;
-            }
-        } //dep2
         .logo_img{
             width: 12rem;
         } //logo_img
