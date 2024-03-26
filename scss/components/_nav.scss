@@ -28,6 +28,9 @@
             background-color: #000;
             height: 0;
             display: none;
+            &:hover{
+                height: 50rem;
+            }
         } //dep2
         .logo_img{
             width: 12rem;
@@ -54,6 +57,26 @@
         } //ko
         .en a{
             color: #999;
+            &:hover{
+                color: #fff;
+            }
         }
     } //dep1 ul_right
 } //header_nav
+
+.footer_nav{
+    padding: 5rem 0 3rem 0;
+    .footer_dep1{
+        display: flex;
+        justify-content: space-between;
+        & > li > a{
+            font-weight: 900;
+            font-size: 1.4rem;
+            display: inline-block;
+            padding-bottom: 1.5rem;
+        }
+        & li{
+            padding: 0.4rem 0 0.4rem 0;
+        }
+    }
+} //footer_nav

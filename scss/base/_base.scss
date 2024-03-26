@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'YouandiModernTR';
-    src: url(/css/YouandiModernTR.ttf);
+    // src: url(../../css/YouandiModernTR.ttf);
+    src: url(../../css/YouandiModernTR.ttf);
 }
 *{
     margin: 0;
@@ -19,6 +20,6 @@ a{
     text-decoration: none;
 }
 .inner{
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
 }

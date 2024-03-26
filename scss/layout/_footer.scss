@@ -1,0 +1,15 @@
+footer{
+    background-color: #000;
+    .address{
+        color: #999;
+        padding: 1.5rem 0 8rem 0;
+        span{
+            font-size: 1.2rem;
+            margin-right: 1.2rem;
+            &.bold{
+                font-weight: 900;
+                text-decoration: underline;
+            }
+        }
+    }
+}

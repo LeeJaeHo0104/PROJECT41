@@ -1,6 +1,6 @@
 @font-face {
   font-family: "YouandiModernTR";
-  src: url(/css/YouandiModernTR.ttf);
+  src: url(../../css/YouandiModernTR.ttf);
 }
 * {
   margin: 0;
@@ -26,37 +26,47 @@ a {
 }
 
 .inner {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
 }
 
 .header_nav .dep1.ul_left a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: block;
   padding: 0rem 2.2rem;
 }
 
 .header_nav .dep1.ul_right a {
-  font-size: 1rem;
+  font-size: 1.4rem;
   display: block;
   padding: 2rem 0 2rem 2rem;
 }
 
+.footer_nav > li > a {
+  font-size: 1.4rem;
+}
+
 .header_nav .dep2 a,
 .footer_nav .dep2 a {
-  font-size: 1rem;
+  font-size: 1.4rem;
+}
+
+.footer_dep2 a {
+  font-size: 1.2rem;
 }
 
 .sub_title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 900;
   margin-bottom: 4rem;
+  transition: all 0.3s;
 }
 
 .section_title {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 900;
   line-height: 1.5;
+  transition: all 0.6s;
 }
 
 .header_nav_bg {
@@ -90,6 +100,9 @@ a {
   height: 0;
   display: none;
 }
+.header_nav .dep1.ul_left .dep2:hover {
+  height: 50rem;
+}
 .header_nav .dep1.ul_left .logo_img {
   width: 12rem;
 }
@@ -113,13 +126,33 @@ a {
 .header_nav .dep1.ul_right .en a {
   color: #999;
 }
+.header_nav .dep1.ul_right .en a:hover {
+  color: #fff;
+}
+
+.footer_nav {
+  padding: 5rem 0 3rem 0;
+}
+.footer_nav .footer_dep1 {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_nav .footer_dep1 > li > a {
+  font-weight: 900;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding-bottom: 1.5rem;
+}
+.footer_nav .footer_dep1 li {
+  padding: 0.4rem 0 0.4rem 0;
+}
 
 .banner {
   position: relative;
 }
 .banner .slide {
   width: 100%;
-  height: 80rem;
+  height: 108rem;
   position: relative;
 }
 .banner .slide .on {
@@ -138,13 +171,13 @@ a {
   background-size: cover;
 }
 .banner .slide .slide1 {
-  background-image: url(/img/banner1.png);
+  background-image: url(../../img/banner1.png);
 }
 .banner .slide .slide2 {
-  background-image: url(/img/banner2.png);
+  background-image: url(../../img/banner2.png);
 }
 .banner .slide .slide3 {
-  background-image: url(/img/banner3.png);
+  background-image: url(../../img/banner3.png);
 }
 .banner .banner_text {
   position: absolute;
@@ -153,12 +186,12 @@ a {
   color: #fff;
 }
 .banner .banner_text .main_text {
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
 }
 .banner .banner_text .sub_text {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 100;
   line-height: 1.4;
 }
@@ -172,7 +205,7 @@ a {
   text-align: center;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.4s;
+  transition: all 0.8s;
 }
 
 main {
@@ -195,7 +228,7 @@ main .sec1 .sec1_bg {
   margin-left: 10rem;
   width: 100%;
   height: 50rem;
-  background-image: url(/img/section1.png);
+  background-image: url(../../img/section1.png);
   background-repeat: no-repeat;
   background-size: 1000px 50rem;
 }
@@ -211,8 +244,8 @@ main .sec2 {
   padding: 10rem 0 15rem 0;
 }
 main .sec2 iframe {
-  width: 80%;
-  height: 45rem;
+  width: 85%;
+  height: 50rem;
   margin-top: 5rem;
   margin-left: 12.5rem;
 }
@@ -221,9 +254,9 @@ main .sec3 {
   height: 76rem;
   color: #fff;
   text-align: center;
-  background-image: url(/img/section3_bg.png);
+  background-image: url(../../img/section3_bg.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   /* counter_cnt */
 }
 main .sec3 .sub_title {
@@ -286,7 +319,7 @@ main .sec4 .sec4_cnt .sec4_left .view_btn:hover {
 main .sec4 .sec4_cnt .sec4_right .sec4_bg {
   width: 40rem;
   height: 60rem;
-  background-image: url(/img/section4_img.png);
+  background-image: url(../../img/section4_img.png);
   background-repeat: no-repeat;
   transition: all 0.3s;
 }
@@ -300,7 +333,7 @@ main .sec5 {
 main .sec5 .sec5_bg {
   width: 100%;
   height: 80rem;
-  background-image: url(/img/section5_bg.png);
+  background-image: url(../../img/section5_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -360,15 +393,28 @@ main .sec6 .sec6_cnt .sec6_right .sec6_right_cnt {
   height: 12rem;
 }
 main .sec6 .sec6_cnt .sec6_right .sec6_right_cnt .cnt_title {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
 }
 main .sec6 .sec6_cnt .sec6_right .sec6_right_cnt .cnt_date {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-weight: 900;
   color: #707070;
 }
-main footer {
+
+footer {
   background-color: #000;
+}
+footer .address {
+  color: #999;
+  padding: 1.5rem 0 8rem 0;
+}
+footer .address span {
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
+}
+footer .address span.bold {
+  font-weight: 900;
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */
