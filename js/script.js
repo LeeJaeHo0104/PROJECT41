@@ -15,6 +15,9 @@ setInterval(() => {
 	slideFn();
 }, 3000);
 
+//sec3 숫자 증가 애니메이션 중단 변수
+let executed = false;
+
 //스크롤 애니메이션
 window.onscroll = function() {
 	let height = window.pageYOffset;
@@ -74,18 +77,16 @@ window.onscroll = function() {
 		sec3Main.style.transform = 'translateY(5rem)';
 	}
 
-	// //sec3 숫자 증가 애니메이션
+	//sec3 숫자 증가 애니메이션
 	const country = document.querySelector('#country');
 	const money = document.querySelector('#money');
 	const people = document.querySelector('#people');
 	let countC = 0;
 	let countM = 0;
 	let countP = 0;
-	let executed = false;
 
 	if (!executed && height > 2400) {
 			executed = true;
-			
 			let countingC = setInterval(function () {
 				if (countC == 14) {
 					clearInterval(countingC);
@@ -112,7 +113,6 @@ window.onscroll = function() {
 				countP += 10;
 				people.innerHTML = new Intl.NumberFormat().format(countP);
 			}, 1);
-			executed = false;
 		}
 
 
