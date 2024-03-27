@@ -1,3 +1,8 @@
+//팝업창 닫기
+$('.close').on('click', function(){
+	$('.popup').fadeOut(800);
+})
+
 //배너
 const slide = $('div[class*="slide1"], div[class*="slide2"], div[class*="slide3"]');
 console.log('slide: ', slide);
