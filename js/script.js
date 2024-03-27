@@ -16,7 +16,7 @@ setInterval(() => {
 }, 3000);
 
 //sec3 숫자 증가 애니메이션 중단 변수
-let executed = false;
+let play = false;
 
 //스크롤 애니메이션
 window.onscroll = function() {
@@ -85,35 +85,33 @@ window.onscroll = function() {
 	let countM = 0;
 	let countP = 0;
 
-	if (!executed && height > 2400) {
-			executed = true;
-			let countingC = setInterval(function () {
-				if (countC == 14) {
-					clearInterval(countingC);
-					return false;
-				}
-				countC += 1;
-				country.innerHTML = new Intl.NumberFormat().format(countC);
-			}, 50);
-
-			let countingM = setInterval(function () {
-				if (countM == 130) {
-					clearInterval(countingM);
-					return false;
-				}
-				countM += 1;
-				money.innerHTML = new Intl.NumberFormat().format(countM);
-			}, 10);
-
-			let countingP = setInterval(function () {
-				if (countP == 5300) {
-					clearInterval(countingP);
-					return false;
-				}
-				countP += 10;
-				people.innerHTML = new Intl.NumberFormat().format(countP);
-			}, 1);
-		}
+	if (!play && height > 2400) {
+		play = true;
+		let countingC = setInterval(function () {
+			if (countC == 14) {
+				clearInterval(countingC);
+				return false;
+			}
+			countC += 1;
+			country.innerHTML = new Intl.NumberFormat().format(countC);
+		}, 50);
+		let countingM = setInterval(function () {
+			if (countM == 130) {
+				clearInterval(countingM);
+				return false;
+			}
+			countM += 1;
+			money.innerHTML = new Intl.NumberFormat().format(countM);
+		}, 10);
+		let countingP = setInterval(function () {
+			if (countP == 5300) {
+				clearInterval(countingP);
+				return false;
+			}
+			countP += 10;
+			people.innerHTML = new Intl.NumberFormat().format(countP);
+		}, 1);
+	}
 
 
 
