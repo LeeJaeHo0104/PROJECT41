@@ -16,6 +16,12 @@
         position: relative;
         display: flex;
         align-items: center;
+        & a{
+            transition: all 0.3s;
+            &:hover{
+                color: #d7d7d7;
+            }
+        }
         & > .logo{
             padding: 0;
         }
@@ -27,7 +33,13 @@
     .dep1.ul_right{
         display: flex;
         align-items: center;
-        
+
+        & a{
+            transition: all 0.3s;
+            &:hover{
+                color: #d7d7d7;
+            }
+        }
 
         .ko{
             position: relative;

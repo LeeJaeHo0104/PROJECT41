@@ -13,7 +13,7 @@ function slideFn() {
 }
 setInterval(() => {
 	slideFn();
-}, 4000);
+}, 3000);
 
 //스크롤 애니메이션
 window.onscroll = function() {
@@ -62,13 +62,6 @@ window.onscroll = function() {
 	const sec3Sub = document.querySelector('.sec3 .sub_title');
 	const sec3Main = document.querySelector('.sec3 .section_title');
 
-	// const country = document.querySelector('.sec3 #country');
-	// const money = document.querySelector('.sec3 #money');
-	// const people = document.querySelector('.sec3 #people');
-	// let isExecuted = false;
-	// let count = 0;
-	
-
 	if(height > 2300 && height < 3200){
 		sec3Sub.style.opacity = '1';
 		sec3Sub.style.transform = 'translateY(0)';
@@ -81,44 +74,58 @@ window.onscroll = function() {
 		sec3Main.style.transform = 'translateY(5rem)';
 	}
 
+	// //sec3 숫자 증가 애니메이션
+	const country = document.querySelector('#country');
+	const money = document.querySelector('#money');
+	const people = document.querySelector('#people');
+	let countC = 0;
+	let countM = 0;
+	let countP = 0;
+	let executed = false;
 
-	//sec4
-	const sec4Bg = document.querySelector('.sec4_bg');
-	if(height > 3350 && height < 4500){
-		sec4Bg.style.filter = 'blur(0px)';
-		sec4Bg.style.backgroundSize = '100% 100%';
-		sec4Bg.style.backgroundPosition = 'center';
-	}else{
-		sec4Bg.style.filter = 'blur(30px)';
-		sec4Bg.style.backgroundSize = '150% 150%';
-		sec4Bg.style.backgroundPosition = 'right top';
-	}
-}
+	if (!executed && height > 2400) {
+			executed = true;
+			
+			let countingC = setInterval(function () {
+				if (countC == 14) {
+					clearInterval(countingC);
+					return false;
+				}
+				countC += 1;
+				country.innerHTML = new Intl.NumberFormat().format(countC);
+			}, 50);
 
+			let countingM = setInterval(function () {
+				if (countM == 130) {
+					clearInterval(countingM);
+					return false;
+				}
+				countM += 1;
+				money.innerHTML = new Intl.NumberFormat().format(countM);
+			}, 10);
 
-
-window.onscroll = function() {
-	let height = window.pageYOffset;
-	console.log('스크롤 높이: ', height);
-
-
-const country = document.querySelector('.sec3 #country');
-const money = document.querySelector('.sec3 #money');
-const people = document.querySelector('.sec3 #people');
-let isExecuted = false;
-let count = 0;
-
-
-if(height > 2400 && !isExecuted){
-	isExecuted = true;
-	let counting = setInterval(function () {
-		if (count == 14) {
-			clearInterval(counting);
-			return false;
+			let countingP = setInterval(function () {
+				if (countP == 5300) {
+					clearInterval(countingP);
+					return false;
+				}
+				countP += 10;
+				people.innerHTML = new Intl.NumberFormat().format(countP);
+			}, 1);
+			executed = false;
 		}
-		count += 1;
-		country.innerHTML = new Intl.NumberFormat().format(count);
-	}, 50);
-	window.removeEventListener('scroll', scrollHandler);
-}
-}
+
+
+
+		//sec4
+		const sec4Bg = document.querySelector('.sec4_bg');
+		if(height > 3400 && height < 4500){
+			sec4Bg.style.filter = 'blur(0px)';
+			sec4Bg.style.backgroundSize = '100% 100%';
+			sec4Bg.style.backgroundPosition = 'center';
+		}else{
+			sec4Bg.style.filter = 'blur(30px)';
+			sec4Bg.style.backgroundSize = '150% 150%';
+			sec4Bg.style.backgroundPosition = 'right top';
+		}
+	}

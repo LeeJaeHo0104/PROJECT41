@@ -1,6 +1,6 @@
 @font-face {
   font-family: "YouandiModernTR";
-  src: url(../css/YouandiModernTR.ttf);
+  src: url(./YouandiModernTR.ttf);
 }
 * {
   margin: 0;
@@ -88,6 +88,12 @@ a {
   display: flex;
   align-items: center;
 }
+.header_nav .dep1.ul_left a {
+  transition: all 0.3s;
+}
+.header_nav .dep1.ul_left a:hover {
+  color: #d7d7d7;
+}
 .header_nav .dep1.ul_left > .logo {
   padding: 0;
 }
@@ -97,6 +103,12 @@ a {
 .header_nav .dep1.ul_right {
   display: flex;
   align-items: center;
+}
+.header_nav .dep1.ul_right a {
+  transition: all 0.3s;
+}
+.header_nav .dep1.ul_right a:hover {
+  color: #d7d7d7;
 }
 .header_nav .dep1.ul_right .ko {
   position: relative;
