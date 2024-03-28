@@ -5,7 +5,6 @@ $('.close').on('click', function(){
 
 //배너
 const slide = $('div[class*="slide1"], div[class*="slide2"], div[class*="slide3"]');
-console.log('slide: ', slide);
 let idx = 0;
 
 function slideFn() {
@@ -26,7 +25,6 @@ let play = false;
 //스크롤 애니메이션
 window.onscroll = function() {
 	let height = window.pageYOffset;
-	console.log('스크롤 높이: ', height);
 	
 	//sec1 
 	const sec1Sub = document.querySelector('.sec1 .sub_title');
