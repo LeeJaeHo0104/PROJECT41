@@ -86,7 +86,7 @@ window.onscroll = function() {
 	}
 }
 ```
-
+---
 ```javascript
 2. JQuery를 활용한 FadeIN-Out 배너 구현
 - slide 내부의 slide1, 2, 3 태그에 opacity : 0을 지정하고, on 클래스를 가진 태그만 opacity : 1을 가지게 하였습니다. 
